@@ -6,9 +6,27 @@
         <meta content="#009d00" name="theme-color">
         <meta content="yes" name="mobile-web-app-capable">
         <title>quicksort.js</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.1.27/spectre.min.css" media="all">
-        <script src="bundle.js"></script>
+        <link rel="stylesheet" href="spectre.min.css" media="all">
+        <style>
+            .bg-grey {
+                background-color: #efefef;
+                padding: 1rem;
+                border-radius: .3rem;
+            }
+        </style>
+        <script src="bundle.js" defer></script>
     </head>
     <body>
+        <section class="section bg-grey">
+            <section id="overview" class="grid-hero container grid-960">
+                <header class="text-center"><h3>quicksort.js</h3></header>
+            </section>
+        </section>
+    </body>
+        <section class="section">
+            <section id="test" class="grid-hero container grid-960">
+                <canvas id="canvas" width="500" height="100"></canvas>
+            </section>
+        </section>
     </body>
 </html>
