@@ -1,5 +1,7 @@
 'use strict';
 
+import { Utils } from './utils';
+
 const quickSort = (arr, left, right) => {
     if (!arr instanceof Array || arr.length === 0 || left >= right) {
         return;
@@ -46,3 +48,4 @@ let testArr = [3, 16, 69, 33, 27, 12, 93, 40, 82, 24];
 console.log(`Unsorted: ${testArr}`);
 quickSort(testArr, 0, testArr.length - 1);
 console.log(`Sorted: ${testArr}`);
+console.log(`Array is sorted: ${Utils.isArraySortedAscending(testArr)}`)
