@@ -45,7 +45,8 @@ const quickSort = (arr, left, right) => {
 }
 
 let testArr = [3, 16, 69, 33, 27, 12, 93, 40, 82, 24];
-console.log('Unsorted:', Utils.getPartOfArray(testArr, 10));
+console.log('Unsorted:', Utils.getPartOfArray(testArr, 10).result);
+console.log(`Array is sorted: ${Utils.isArraySortedAscending(testArr).result}`)
 quickSort(testArr, 0, testArr.length - 1);
-console.log('Sorted:', Utils.getPartOfArray(testArr, 10));
-console.log(`Array is sorted: ${Utils.isArraySortedAscending(testArr)}`)
+console.log('Sorted:', Utils.getPartOfArray(testArr, 10).result);
+console.log(`Array is sorted: ${Utils.isArraySortedAscending(testArr).result}`)

@@ -9,25 +9,42 @@ export const Utils = {
             // walk through the whole array and return the function
             // if one element is bigger than the element behind it.
             if (arr[i] > arr[i+1]) {
-                console.log(arr[i] + " > " + arr[i+1]);
-                return false;
+                const error = arr[i] + " > " + arr[i+1];
+                return {
+                    status: 'error',
+                    result: false,
+                    error: error
+                };
             }
         }
-        return true;
+        return {
+            status: 'success',
+            result: true,
+            error: null
+        };
     },
     getPartOfArray (arr, length) {
         if (!(arr instanceof Array)) {
-            return null;
+            return {
+                status: 'error',
+                result: null,
+                error: 'No array given'
+            };
         }
         if (typeof length !== 'number' || length >= arr.length) {
             // if the given length is bigger or the same size
             // as the array, return the whole array as string
-            return arr;
+            return {
+                status: 'error',
+                result: arr,
+                error: 'No or too large number given'
+            };
         }
-        let part = "[";
-        for (let i = 0; i < length; i++) {
-            part += arr[i] + ", ";
-        }
-        return part + "... ]";
+        const partOfArray = arr.slice(0, length).join(", ");
+        return {
+            result: 'success',
+            result: `[ ${partOfArray}, ... ]`,
+            error: null
+        };
     }
 };
