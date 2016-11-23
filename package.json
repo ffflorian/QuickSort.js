@@ -4,10 +4,11 @@
   "description": "A JavaScript QuickSort implementation",
   "main": "quicksort.js",
   "scripts": {
-    "start": "npm run -s build && node dist/quicksort.js",
-    "test": "npm run -s build && npm run -s build-tests && jasmine-node dist/",
-    "build": "babel -q src -d dist",
-    "build-tests": "babel -q tests -d dist"
+    "start": "npm run -s babel",
+    "test": "npm run -s babel && npm run -s babel-tests && jasmine-node dist/",
+    "babel": "babel -q src -d dist",
+    "babel-tests": "babel -q tests -d dist",
+    "build-visual": "npm run babel && cp src/visual/index.html dist-visual/index.html && node node_modules/webpack/bin/webpack.js src/visual/webpack.js dist-visual/bundle.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-preset-es2015": "^6.18.0",
-    "jasmine-node": "^1.14.5"
+    "jasmine-node": "^1.14.5",
+    "webpack": "^1.13.3"
   }
 }
