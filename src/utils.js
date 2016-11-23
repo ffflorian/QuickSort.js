@@ -1,6 +1,6 @@
 'use strict';
 
-export const Utils = {
+export const utils = {
     isArraySortedAscending (arr) {
         if (!(arr instanceof Array)) {
             return false;

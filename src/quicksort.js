@@ -1,7 +1,5 @@
 'use strict';
 
-import { Utils } from './utils';
-
 export const quickSort = () => {
     const sort = (arr, left, right) => {
         if (arr.length === 0 || left >= right) {

@@ -8,7 +8,7 @@
     "test": "npm run -s babel && npm run -s babel-tests && jasmine-node dist/",
     "babel": "babel -q src -d dist",
     "babel-tests": "babel -q tests -d dist",
-    "build-visual": "npm run babel && cp src/visual/index.html dist-visual/index.html && node node_modules/webpack/bin/webpack.js src/visual/webpack.js dist-visual/bundle.js"
+    "build-visual": "npm run babel && cp src/visual/index.html dist-visual/index.html && node node_modules/webpack/bin/webpack.js --optimize-minimize src/visual/webpack.js dist-visual/bundle.js"
   },
   "repository": {
     "type": "git",
