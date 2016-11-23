@@ -4,5 +4,5 @@ logs
 npm-debug.log*
 node_modules/
 dist/
-visual-dist/
+dist-visual/
 data/
