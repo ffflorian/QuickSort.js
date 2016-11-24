@@ -47,8 +47,9 @@ export const quickSort = () => {
             if (!(arr instanceof Array)) {
                 return null;
             }
-            sort(arr.slice(), 0, arr.length - 1);
-            return arr;
+            let arrayCopy = arr.slice(0);
+            sort(arrayCopy, 0, arr.length - 1);
+            return arrayCopy;
         }
     };
 };
