@@ -1,4 +1,4 @@
-## quicksort.js
+## QuickSort.js
 
 A JavaScript QuickSort implementation.
 
@@ -18,11 +18,11 @@ Now you could use it like this:
 ```js
 'use strict';
 
-import { quickSort } from './quicksort';
+import { QuickSort } from './QuickSort';
 
 const unsortedArray = [15, 13, 1, 22];
-const sortedArray = quickSort().sort(unsortedArray);
-// sortedArray = [1, 13, 15, 22]
+const sortedArray = QuickSort().sort(unsortedArray);
+// sortedArray === [1, 13, 15, 22]
 ```
 
 You can also run a few tests:
