@@ -1,6 +1,6 @@
 'use strict';
 
-export const QuickSort = () => {
+export default function QuickSort () {
     const sort = (arr, left, right) => {
         if (arr.length === 0 || left >= right) {
             return;

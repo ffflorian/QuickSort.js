@@ -2,7 +2,7 @@
   "name": "QuickSort.js",
   "version": "1.0.0",
   "description": "A JavaScript QuickSort implementation",
-  "main": "QuickSort.js",
+  "main": "src/QuickSort.js",
   "scripts": {
     "start": "npm run -s babel",
     "test": "npm run -s babel && npm run -s babel-tests && jasmine-node dist/",

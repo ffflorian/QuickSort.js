@@ -1,6 +1,6 @@
 'use strict';
 
-import { QuickSort } from './QuickSort';
+import QuickSort from './QuickSort';
 import { utils } from './utils';
 
 describe('QuickSort', () => {
