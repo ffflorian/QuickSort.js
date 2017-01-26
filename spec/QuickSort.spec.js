@@ -1,20 +1,22 @@
 'use strict';
 
-import QuickSort from './QuickSort';
-import { utils } from './utils';
+const QuickSort = require('../src/QuickSort');
+const utils = require('../src/utils');
 
 describe('QuickSort', () => {
-    it ('sorts 2 numbers', () => {
+    it('sorts 2 numbers', () => {
         const unsortedArray = [5, 3];
         const sortedArray = QuickSort().sort(unsortedArray);
         expect(utils.isArraySortedAscending(sortedArray).result).toEqual(true);
     });
-    it ('sorts 10 numbers', () => {
+
+    it('sorts 10 numbers', () => {
         const unsortedArray = [3, 16, 69, 33, 27, 12, 93, 40, 82, 24];
         const sortedArray = QuickSort().sort(unsortedArray);
         expect(utils.isArraySortedAscending(sortedArray).result).toEqual(true);
     });
-    it ('sorts 100 numbers', () => {
+
+    it('sorts 100 numbers', () => {
         const unsortedArray = [
             236, 156, 196, 25, 357, 198, 420, 418, 75, 399, 416, 136, 396, 1, 296, 174, 36, 83,
             128, 97, 491, 259, 411, 340, 62, 373, 57, 497, 440, 168, 492, 22, 153, 44, 225, 258,
@@ -26,13 +28,15 @@ describe('QuickSort', () => {
         const sortedArray = QuickSort().sort(unsortedArray);
         expect(utils.isArraySortedAscending(sortedArray).result).toEqual(true);
     });
-    it ('sorts an empty array', () => {
+
+    it('sorts an empty array', () => {
         const unsortedArray = [];
         const sortedArray = QuickSort().sort(unsortedArray);
         expect(sortedArray).toEqual([]);
         expect(utils.isArraySortedAscending(sortedArray).result).toEqual(true);
     });
-    it ('doesn\'t sort a null value', () => {
+
+    it('doesn\'t sort a null value', () => {
         const unsortedArray = null;
         const sortedArray = QuickSort().sort(unsortedArray);
         expect(sortedArray).toEqual(null);
