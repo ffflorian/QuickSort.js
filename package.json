@@ -1,32 +1,28 @@
 {
-  "name": "QuickSort.js",
-  "version": "1.0.0",
-  "description": "A JavaScript QuickSort implementation",
-  "main": "src/QuickSort.js",
-  "scripts": {
-    "start": "npm run -s test",
-    "test": "jasmine"
+  "author": "@ffflorian",
+  "bugs": {
+    "url": "https://github.com/ffflorian/QuickSort.js/issues"
   },
+  "description": "A JavaScript QuickSort implementation",
+  "devDependencies": {
+    "jasmine": "^2.5.3",
+    "jasmine-console-reporter": "^1.2.7",
+    "jsdoc": "^3.4.3",
+    "tsd-jsdoc": "dcodeio/tsd-jsdoc#fe76c4dc071b00bb549d3af7a3bad8c555999e81"
+  },
+  "homepage": "https://github.com/ffflorian/QuickSort.js#readme",
+  "license": "MIT",
+  "main": "src/QuickSort.js",
+  "name": "QuickSort.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ffflorian/QuickSort.js.git"
   },
-  "author": "@ffflorian",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ffflorian/QuickSort.js/issues"
+  "scripts": {
+    "start": "npm run -s test",
+    "test": "jasmine",
+    "types": "jsdoc --verbose --pedantic --configure jsdoc.json src/"
   },
-  "homepage": "https://github.com/ffflorian/QuickSort.js#readme",
-  "devDependencies": {
-    "babel-cli": "^6.18.0",
-    "babel-preset-es2015": "^6.18.0",
-    "jasmine": "^2.5.3",
-    "jasmine-console-reporter": "^1.2.7",
-    "webpack": "^1.13.3"
-  },
-  "babel": {
-    "presets": [
-      "es2015"
-    ]
-  }
+  "types": "typings/types.d.ts",
+  "version": "1.0.0"
 }

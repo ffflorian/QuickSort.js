@@ -1,6 +1,19 @@
 'use strict';
 
-module.exports = {
+/** @class Utils */
+class Utils {
+    /**
+     * @typedef {Object} returnStatus
+     * @param {!string} status
+     * @param {!(boolean|string|Array<number>)} result
+     * @param {string} error
+     */
+
+    /**
+     * Check if a given array is sorted ascending
+     * @param {!Array<number>} arr - The array to check
+     * @returns {returnStatus}
+     */
     isArraySortedAscending (arr) {
         if (!(arr instanceof Array)) {
             return false;
@@ -9,7 +22,7 @@ module.exports = {
             // walk through the whole array and return the function
             // if one element is bigger than the element behind it.
             if (arr[i] > arr[i+1]) {
-                const error = arr[i] + " > " + arr[i+1];
+                const error = `${arr[i]} > ${arr[i+1]}`;
                 return {
                     status: 'error',
                     result: false,
@@ -22,7 +35,14 @@ module.exports = {
             result: true,
             error: null
         };
-    },
+    }
+
+    /**
+     * Get part of an array
+     * @param {!Array<number>} arr - The array to check
+     * @param {!number} length - The array to check
+     * @returns {returnStatus}
+     */
     getPartOfArray (arr, length) {
         if (!(arr instanceof Array)) {
             return {
@@ -40,11 +60,13 @@ module.exports = {
                 error: 'No or too large number given'
             };
         }
-        const partOfArray = arr.slice(0, length).join(", ");
+        const partOfArray = arr.slice(0, length).join(', ');
         return {
             result: 'success',
             result: `[ ${partOfArray}, ... ]`,
             error: null
         };
     }
-};
+}
+
+module.exports = Utils;

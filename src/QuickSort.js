@@ -1,7 +1,19 @@
 'use strict';
 
-module.exports = () => {
-    const sort = (arr, left, right) => {
+/**
+ * @class QuickSort
+ */
+class QuickSort {
+
+    /**
+     * Recursive quick sort
+     * @param {!Array<number>} arr - The array to sort
+     * @param {!number} left - The left side of the partly sorted array
+     * @param {!number} right - The right side of the partly sorted array
+     * @private
+     * @returns {void}
+     */
+    static _sort (arr, left, right) {
         if (arr.length === 0 || left >= right) {
             return;
         }
@@ -39,17 +51,23 @@ module.exports = () => {
         }
 
         // recursively sort the rest of the array
-        sort(arr, left, j);
-        sort(arr, i, right);
-    };
-    return {
-        sort (arr) {
-            if (!(arr instanceof Array)) {
-                return null;
-            }
-            let arrayCopy = arr.slice(0);
-            sort(arrayCopy, 0, arr.length - 1);
-            return arrayCopy;
+        QuickSort._sort(arr, left, j);
+        QuickSort._sort(arr, i, right);
+    }
+
+    /**
+     * Sort an array with QuickSort.
+     * @param {Array<number>} arr - The array to sort
+     * @returns {Array<number>} The sorted array
+     */
+    sort (arr) {
+        if (!(arr instanceof Array)) {
+            return null;
         }
-    };
-};
+        let arrayCopy = arr.slice(0);
+        QuickSort._sort(arrayCopy, 0, arr.length - 1);
+        return arrayCopy;
+    }
+}
+
+module.exports = QuickSort;
