@@ -1,5 +1,7 @@
 ## QuickSort.js
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ffflorian/QuickSort.js.svg)](https://greenkeeper.io/)
+
 A JavaScript QuickSort implementation.
 
 ### Usage
