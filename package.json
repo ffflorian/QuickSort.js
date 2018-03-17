@@ -1,28 +1,23 @@
 {
   "author": "@ffflorian",
-  "bugs": {
-    "url": "https://github.com/ffflorian/QuickSort.js/issues"
-  },
-  "description": "A JavaScript QuickSort implementation",
+  "description": "A TypeScript QuickSort implementation",
   "devDependencies": {
-    "jasmine": "^3.0.0",
-    "jasmine-console-reporter": "^2.0.1",
-    "jsdoc": "^3.4.3",
-    "tsd-jsdoc": "dcodeio/tsd-jsdoc#fe76c4dc071b00bb549d3af7a3bad8c555999e81"
+    "jasmine": "3.1.0",
+    "jasmine-console-reporter": "2.0.1",
+    "rimraf": "2.6.2",
+    "typescript": "2.7.2"
   },
-  "homepage": "https://github.com/ffflorian/QuickSort.js#readme",
   "license": "MIT",
-  "main": "src/QuickSort.js",
-  "name": "QuickSort.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ffflorian/QuickSort.js.git"
-  },
+  "main": "dist/index.js",
+  "name": "quicksort",
+  "private": true,
+  "repository": "https://github.com/ffflorian/QuickSort.js.git",
   "scripts": {
-    "start": "npm run -s test",
-    "test": "jasmine",
-    "types": "jsdoc --verbose --pedantic --configure jsdoc.json src/"
+    "clear": "rimraf dist",
+    "dist": "yarn clear && tsc",
+    "test": "yarn dist && yarn test:node",
+    "test:node": "jasmine"
   },
-  "types": "typings/types.d.ts",
+  "types": "dist/index.d.ts",
   "version": "1.1.0"
 }

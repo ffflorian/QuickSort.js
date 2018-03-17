@@ -2,14 +2,12 @@
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/ffflorian/QuickSort.js.svg)](https://greenkeeper.io/)
 
-A JavaScript QuickSort implementation.
+A TypeScript QuickSort implementation.
 
 ### Usage
 
 ```js
-'use strict';
-
-const QuickSort = require('./QuickSort');
+const QuickSort = require('quicksort');
 
 const unsortedArray = [15, 13, 1, 22];
 const sortedArray = new QuickSort().sort(unsortedArray);
@@ -19,5 +17,6 @@ const sortedArray = new QuickSort().sort(unsortedArray);
 ### Tests
 
 ```bash
-$ npm test
+$ yarn
+$ yarn test
 ```
