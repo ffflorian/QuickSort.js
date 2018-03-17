@@ -7,10 +7,10 @@ A TypeScript QuickSort implementation.
 ### Usage
 
 ```js
-const QuickSort = require('quicksort');
+import * as quickSort from 'quicksort';
 
 const unsortedArray = [15, 13, 1, 22];
-const sortedArray = new QuickSort().sort(unsortedArray);
+const sortedArray = quickSort.sort(unsortedArray);
 // sortedArray === [1, 13, 15, 22]
 ```
 
