@@ -1,6 +1,6 @@
 ## QuickSort.js
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/ffflorian/QuickSort.js.svg)](https://greenkeeper.io/)
+[![Dependabot badge](https://img.shields.io/badge/Dependabot-active-brightgreen.svg)](https://dependabot.com/)
 
 A TypeScript QuickSort implementation.
 
