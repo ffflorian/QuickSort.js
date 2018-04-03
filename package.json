@@ -3,7 +3,6 @@
   "description": "A TypeScript QuickSort implementation",
   "devDependencies": {
     "jasmine": "3.1.0",
-    "jasmine-console-reporter": "2.0.1",
     "rimraf": "2.6.2",
     "typescript": "2.7.2"
   },
