@@ -1,16 +1,12 @@
-# http://docs.travis-ci.com/user/languages/javascript-with-nodejs/
 language: node_js
 node_js:
   - "10"
 
 cache:
+  yarn: true
   directories:
-    - $HOME/.npm
-    - node_modules
+    - "node_modules"
 
-install:
-  - npm install
+notifications:
+  email: false
 
-# http://docs.travis-ci.com/user/pull-requests/
-script:
-  - npm test
