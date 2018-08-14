@@ -4,7 +4,7 @@
  * @param left The left side of the partly sorted array
  * @param right The right side of the partly sorted array
  */
-const _sort = (arr: Array<number>, left: number, right: number): void => {
+const _sort = (arr: number[], left: number, right: number): void => {
   if (arr.length === 0 || left >= right) {
     return;
   }
@@ -51,7 +51,7 @@ const _sort = (arr: Array<number>, left: number, right: number): void => {
  * @param arr The array to sort
  * @returns The sorted array
  */
-export const sort = (arr: Array<number>): Array<number> => {
+export const sort = (arr: number[]): number[] => {
   let arrayCopy = arr.slice(0);
   _sort(arrayCopy, 0, arr.length - 1);
   return arrayCopy;

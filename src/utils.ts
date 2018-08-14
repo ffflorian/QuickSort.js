@@ -2,7 +2,7 @@
  * Check if a given array is sorted ascending
  * @param arr The array to check
  */
-export const isArraySortedAscending = (arr: Array<number>): boolean => {
+export const isArraySortedAscending = (arr: number[]): boolean => {
   for (let i = 0; i < arr.length - 1; i++) {
     // walk through the whole array and return the function
     // if one element is bigger than the element behind it.
@@ -18,7 +18,7 @@ export const isArraySortedAscending = (arr: Array<number>): boolean => {
  * @param arr The array to split
  * @param length The length of the splitted array
  */
-export const getPartOfArray = (arr: Array<number>, length: number): Array<number> => {
+export const getPartOfArray = (arr: number[], length: number): number[] => {
   if (length >= arr.length) {
     // if the given length is bigger or the same size
     // as the array, return the whole array as string

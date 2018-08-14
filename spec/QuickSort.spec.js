@@ -1,3 +1,4 @@
+//@ts-check
 const quickSort = require('../');
 const utils = require('../dist/utils');
 
