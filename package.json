@@ -2,11 +2,14 @@
   "author": "@ffflorian",
   "description": "A TypeScript QuickSort implementation",
   "devDependencies": {
+    "@types/jasmine": "2.8.8",
     "jasmine": "3.2.0",
+    "prettier": "1.14.3",
     "rimraf": "2.6.2",
+    "ts-node": "7.0.1",
     "typescript": "3.0.3"
   },
-  "files":[
+  "files": [
     "dist"
   ],
   "license": "MIT",
@@ -18,7 +21,8 @@
     "build": "tsc",
     "clear": "rimraf dist",
     "dist": "yarn clear && yarn build",
-    "test": "yarn dist && jasmine"
+    "prettier": "prettier --ignore-path .gitignore --write \"**/*.ts\"",
+    "test": "ts-node -P tsconfig.jasmine.json node_modules/.bin/jasmine"
   },
   "types": "dist/index.d.ts",
   "version": "1.1.0"
