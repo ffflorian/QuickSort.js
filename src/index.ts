@@ -44,7 +44,7 @@ const _sort = (arr: number[], left: number, right: number): void => {
   // recursively sort the rest of the array
   _sort(arr, left, j);
   _sort(arr, i, right);
-}
+};
 
 /**
  * Sort an array with QuickSort.
@@ -55,4 +55,4 @@ export const sort = (arr: number[]): number[] => {
   let arrayCopy = arr.slice(0);
   _sort(arrayCopy, 0, arr.length - 1);
   return arrayCopy;
-}
+};

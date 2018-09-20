@@ -6,12 +6,12 @@ export const isArraySortedAscending = (arr: number[]): boolean => {
   for (let i = 0; i < arr.length - 1; i++) {
     // walk through the whole array and return the function
     // if one element is bigger than the element behind it.
-    if (arr[i] > arr[i+1]) {
-      throw new Error(`${arr[i]} > ${arr[i+1]}`);
+    if (arr[i] > arr[i + 1]) {
+      throw new Error(`${arr[i]} > ${arr[i + 1]}`);
     }
   }
   return true;
-}
+};
 
 /**
  * Get part of an array
@@ -25,4 +25,4 @@ export const getPartOfArray = (arr: number[], length: number): number[] => {
     throw new Error('Too large number given');
   }
   return arr.slice(0, length);
-}
+};
