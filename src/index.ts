@@ -18,12 +18,12 @@ const _sort = (arr: number[], left: number, right: number): void => {
   let j = right;
   while (i <= j) {
     /*
-      * Find a number on the left side which is greater
-      * than the pivot value, and a number from the
-      * right side which is less than the pivot value.
-      * When the search is complete, we can swap these
-      * numbers.
-      */
+     * Find a number on the left side which is greater
+     * than the pivot value, and a number from the
+     * right side which is less than the pivot value.
+     * When the search is complete, we can swap these
+     * numbers.
+     */
     while (arr[i] < pivot) {
       i++;
     }
@@ -52,7 +52,7 @@ const _sort = (arr: number[], left: number, right: number): void => {
  * @returns The sorted array
  */
 export const sort = (arr: number[]): number[] => {
-  let arrayCopy = arr.slice(0);
+  const arrayCopy = arr.slice(0);
   _sort(arrayCopy, 0, arr.length - 1);
   return arrayCopy;
 };
