@@ -1,7 +1,8 @@
-workflow "Build and test" {
+workflow "Build, lint and test" {
   on = "push"
   resolves = [
     "Build project",
+    "Lint project",
     "Test project"
   ]
 }
@@ -22,6 +23,13 @@ action "Build project" {
   needs = "Install dependencies"
   runs = "yarn"
   args = "dist"
+}
+
+action "Lint project" {
+  uses = "docker://node:10-slim"
+  needs = "Install dependencies"
+  runs = "yarn"
+  args = "lint"
 }
 
 action "Test project" {
