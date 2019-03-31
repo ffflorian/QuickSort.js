@@ -4,7 +4,7 @@
  * @param left The left side of the partly sorted array
  * @param right The right side of the partly sorted array
  */
-const _sort = (arr: number[], left: number, right: number): void => {
+function _sort(arr: number[], left: number, right: number): void {
   if (arr.length === 0 || left >= right) {
     return;
   }
@@ -44,15 +44,15 @@ const _sort = (arr: number[], left: number, right: number): void => {
   // recursively sort the rest of the array
   _sort(arr, left, j);
   _sort(arr, i, right);
-};
+}
 
 /**
  * Sort an array with QuickSort.
  * @param arr The array to sort
  * @returns The sorted array
  */
-export const sort = (arr: number[]): number[] => {
+export function sort(arr: number[]): number[] {
   const arrayCopy = arr.slice(0);
   _sort(arrayCopy, 0, arr.length - 1);
   return arrayCopy;
-};
+}
