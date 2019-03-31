@@ -43,8 +43,8 @@
     "lint": "yarn lint:ts && yarn lint:ts:spec && yarn lint:other",
     "lint:other": "yarn prettier --list-different",
     "lint:ts": "tslint --project tsconfig.json",
-    "lint:ts:spec": "tslint --project tsconfig.json",
-    "prettier": "prettier --ignore-path .gitignore --write \"*.{json,md,ts}\"",
+    "lint:ts:spec": "tslint --project tsconfig.jasmine.json",
+    "prettier": "prettier --ignore-path .gitignore \"*.{json,md,ts}\"",
     "test": "ts-node -P tsconfig.jasmine.json node_modules/.bin/jasmine"
   },
   "version": "1.1.0"
