@@ -18,6 +18,11 @@
   "files": [
     "dist"
   ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "license": "MIT",
   "lint-staged": {
     "*.{json,md}": [
@@ -44,7 +49,7 @@
     "dist": "yarn clear && yarn build",
     "fix": "yarn fix:other && yarn fix:ts",
     "fix:other": "yarn prettier --write",
-    "fix:ts": "yarn lint:ts --fix",
+    "fix:ts": "yarn lint:ts --fix && yarn lint:ts:spec --fix",
     "lint": "yarn lint:ts && yarn lint:ts:spec && yarn lint:other",
     "lint:other": "yarn prettier --list-different",
     "lint:ts": "tslint --project tsconfig.json",
