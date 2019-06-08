@@ -4,12 +4,15 @@
   "devDependencies": {
     "@ffflorian/prettier-config": "0.0.5",
     "@ffflorian/tslint-config": "0.2.2",
+    "@semantic-release/changelog": "3.0.2",
+    "@semantic-release/git": "7.0.8",
     "@types/jasmine": "3.3.13",
     "husky": "2.4.0",
     "jasmine": "3.4.0",
     "lint-staged": "8.2.0",
     "prettier": "1.18.0",
     "rimraf": "2.6.3",
+    "semantic-release": "15.13.12",
     "ts-node": "8.2.0",
     "tslint": "5.17.0",
     "tslint-config-prettier": "1.18.0",
@@ -46,8 +49,8 @@
   "repository": "https://github.com/ffflorian/QuickSort.js.git",
   "scripts": {
     "build": "tsc",
-    "clear": "rimraf dist",
-    "dist": "yarn clear && yarn build",
+    "clean": "rimraf dist",
+    "dist": "yarn clean && yarn build",
     "fix": "yarn fix:other && yarn fix:ts",
     "fix:other": "yarn prettier --write",
     "fix:ts": "yarn lint:ts --fix && yarn lint:ts:spec --fix",
@@ -55,7 +58,8 @@
     "lint:other": "yarn prettier --list-different",
     "lint:ts": "tslint --project tsconfig.json",
     "lint:ts:spec": "tslint --project tsconfig.jasmine.json",
-    "prettier": "prettier --ignore-path .gitignore \"*.{json,md}\"",
+    "prettier": "prettier \"*.{json,md}\"",
+    "release": "semantic-release",
     "test": "ts-node -P tsconfig.jasmine.json node_modules/.bin/jasmine"
   },
   "version": "1.1.0"

@@ -1,3 +1,4 @@
 dist
+dist-visual/
 node_modules
 package.json
