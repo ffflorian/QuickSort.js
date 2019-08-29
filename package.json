@@ -43,10 +43,10 @@
     ]
   },
   "main": "dist/index.js",
-  "name": "quicksort",
+  "name": "quick-sort",
   "prettier": "@ffflorian/prettier-config",
   "private": true,
-  "repository": "https://github.com/ffflorian/QuickSort.js.git",
+  "repository": "https://github.com/ffflorian/quick-sort.git",
   "scripts": {
     "build": "tsc",
     "clean": "rimraf dist",
