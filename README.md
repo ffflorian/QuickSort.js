@@ -1,4 +1,4 @@
-# quick-sort [![Build Status](https://action-badges.now.sh/ffflorian/quick-sort)](https://github.com/ffflorian/quick-sort/actions/) [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=ffflorian/quick-sort)](https://dependabot.com)
+# quick-sort [![Build Status](https://github.com/ffflorian/quick-sort/workflows/Build/badge.svg)](https://github.com/ffflorian/quick-sort/actions/) [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=ffflorian/quick-sort)](https://dependabot.com)
 
 A TypeScript QuickSort implementation.
 
