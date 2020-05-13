@@ -14,9 +14,9 @@ function _sort(arr: number[], left: number, right: number): void {
   const pivot = arr[middle];
 
   // Divide into two arrays and presort
-  let i = left;
-  let j = right;
-  while (i <= j) {
+  let leftIndex = left;
+  let rightIndex = right;
+  while (leftIndex <= rightIndex) {
     /*
      * Find a number on the left side which is greater
      * than the pivot value, and a number from the
@@ -24,26 +24,26 @@ function _sort(arr: number[], left: number, right: number): void {
      * When the search is complete, we can swap these
      * numbers.
      */
-    while (arr[i] < pivot) {
-      i++;
+    while (arr[leftIndex] < pivot) {
+      leftIndex++;
     }
 
-    while (arr[j] > pivot) {
-      j--;
+    while (arr[rightIndex] > pivot) {
+      rightIndex--;
     }
 
-    if (i <= j) {
-      const temp = arr[i];
-      arr[i] = arr[j];
-      arr[j] = temp;
-      i++;
-      j--;
+    if (leftIndex <= rightIndex) {
+      const temp = arr[leftIndex];
+      arr[leftIndex] = arr[rightIndex];
+      arr[rightIndex] = temp;
+      leftIndex++;
+      rightIndex--;
     }
   }
 
   // recursively sort the rest of the array
-  _sort(arr, left, j);
-  _sort(arr, i, right);
+  _sort(arr, left, rightIndex);
+  _sort(arr, leftIndex, right);
 }
 
 /**

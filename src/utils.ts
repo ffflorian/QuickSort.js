@@ -2,12 +2,12 @@
  * Check if a given array is sorted ascending
  * @param arr The array to check
  */
-export const isArraySortedAscending = (arr: number[]): boolean => {
-  for (let i = 0; i < arr.length - 1; i++) {
+export const isArraySortedAscending = (arr: number[]): true => {
+  for (let index = 0; index < arr.length - 1; index++) {
     // walk through the whole array and return the function
     // if one element is bigger than the element behind it.
-    if (arr[i] > arr[i + 1]) {
-      throw new Error(`${arr[i]} > ${arr[i + 1]}`);
+    if (arr[index] > arr[index + 1]) {
+      throw new Error(`${arr[index]} > ${arr[index + 1]}`);
     }
   }
   return true;

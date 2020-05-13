@@ -1,3 +1,5 @@
+/* eslint-disable no-magic-numbers */
+
 import * as QuickSort from '../src';
 import * as utils from '../src/utils';
 
