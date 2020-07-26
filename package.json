@@ -1,5 +1,5 @@
 {
-  "author": "@ffflorian",
+  "author": "Florian Keller <git@ffflorian.de>",
   "description": "A TypeScript QuickSort implementation",
   "devDependencies": {
     "@ffflorian/eslint-config": "0.6.1",
