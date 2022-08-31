@@ -46,7 +46,7 @@
     "lint:other": "yarn prettier --list-different",
     "lint:ts": "eslint --ignore-path .gitignore --ext .ts src/",
     "lint:ts:spec": "eslint --ignore-path .gitignore --ext .ts --config .eslintrc.spec.json spec/",
-    "prettier": "prettier \"*.{json,md}\"",
+    "prettier": "prettier \"*.{json,md,yml}\"",
     "test": "ts-node -P tsconfig.jasmine.json node_modules/.bin/jasmine"
   },
   "version": "1.2.0"
