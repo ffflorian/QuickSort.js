@@ -2,6 +2,7 @@
   "author": "Florian Imdahl <git@ffflorian.de>",
   "description": "A TypeScript QuickSort implementation",
   "devDependencies": {
+    "@evilmartians/lefthook": "1.1.1",
     "@ffflorian/eslint-config": "0.8.2",
     "@ffflorian/prettier-config": "0.1.3",
     "@types/jasmine": "4.3.0",
@@ -19,9 +20,7 @@
     "eslint-plugin-sort-keys-fix": "1.1.2",
     "eslint-plugin-typescript-sort-keys": "2.1.0",
     "eslint-plugin-unused-imports": "1.1.5",
-    "husky": "4.3.8",
     "jasmine": "4.3.0",
-    "lint-staged": "13.0.3",
     "prettier": "2.7.1",
     "rimraf": "3.0.2",
     "ts-node": "9.1.1",
@@ -31,17 +30,6 @@
     "dist"
   ],
   "license": "GPL-3.0",
-  "lint-staged": {
-    "*.{json,md}": [
-      "prettier --write"
-    ],
-    "spec/**/*.ts": [
-      "eslint --config .eslintrc.spec.json --fix"
-    ],
-    "src/**/*.ts": [
-      "eslint --fix"
-    ]
-  },
   "main": "dist/index.js",
   "name": "quick-sort",
   "prettier": "@ffflorian/prettier-config",
