@@ -3,7 +3,7 @@
   "description": "A TypeScript QuickSort implementation",
   "devDependencies": {
     "@evilmartians/lefthook": "1.1.1",
-    "@ffflorian/eslint-config": "0.8.2",
+    "@ffflorian/eslint-config": "0.8.3",
     "@ffflorian/prettier-config": "0.1.4",
     "@types/jasmine": "4.3.0",
     "@typescript-eslint/eslint-plugin": "4.33.0",
